@@ -1,0 +1,11 @@
+.container {
+    width: 960px;
+}
+.grid-row {
+    display: flex;
+}
+
+.grid-box {
+    border: 1px solid green;
+    background: #f8f8ff
+}
