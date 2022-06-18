@@ -12,6 +12,10 @@ function createGrid(amountOfGrids) {
           gridBox.classList.add("grid-box")
           gridBox.style.width = `${widthAndHeight}px`
           gridBox.style.height = `${widthAndHeight}px`
+          gridBox.addEventListener("mouseenter", function() {
+              gridBox.style.background = "#008751";
+              gridBox.style.border = "1px sold white"
+          })
           row.appendChild(gridBox)
       }
 
