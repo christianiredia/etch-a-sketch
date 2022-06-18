@@ -2,10 +2,6 @@
     width: 960px;
 }
 
-body {
-    width: 100%;
-    margin: 0 auto;
-}
 .grid-row {
     display: flex;
 }

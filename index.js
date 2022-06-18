@@ -6,7 +6,16 @@ function createGrid(amountOfGrids) {
     const wrapper = document.createElement("div")
     wrapper.classList.add("wrapper")
 
+function randomRGB() {
+    let r = Math.floor(Math.random() * 256)
+    let g = Math.floor(Math.random() * 256)
+    let b = Math.floor(Math.random() * 256)
+
+    return {r, g, b}
+}
+
   for ( let i = 0; i < amountOfGrids; i++) {
+      let { r, g, b} = randomRGB()
       let row = document.createElement("div")
       row.classList.add("grid-row")
 
@@ -18,7 +27,8 @@ function createGrid(amountOfGrids) {
           gridBox.style.height = `${widthAndHeight}px`
 
           gridBox.addEventListener("mouseenter", function() {
-          gridBox.style.background = "#008751";
+              let bgColor = "rgb(" + r + "," + g + "," + b + ")";
+          gridBox.style.background = bgColor;
           })
           row.appendChild(gridBox)
       }
